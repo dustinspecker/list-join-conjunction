@@ -18,8 +18,8 @@ formattedString : List String -> String
 formattedString conjunction list =
   ListJoinConjunction.make "and" list
 
-formattedString "and" [ "red, "blue" ] -- "red and blue"
-formattedString "or" [ "red, "blue", "white" ] -- "red, blue, or white"
+formattedString "and" [ "red", "blue" ] -- "red and blue"
+formattedString "or" [ "red", "blue", "white" ] -- "red, blue, or white"
 ```
 
 ## License
