@@ -43,15 +43,8 @@ make conjunction list =
       String.join (" " ++ conjunction ++ " ") list
 
     _ ->
-      let
-        joinedList : String
-        joinedList =
-          List.take ((List.length list) - 1) list
-            |> String.join ", "
-
-        appendAnd : String
-        appendAnd =
-          (", " ++ conjunction ++ " ")
-            |> String.append joinedList
-      in
-        appendAnd ++ (String.join "" (last list))
+      (", " ++ conjunction ++ " " ++ (String.join "" (last list)))
+        |> String.append
+            (List.take ((List.length list) - 1) list
+              |> String.join ", "
+            )
