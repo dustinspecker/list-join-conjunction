@@ -29,7 +29,7 @@ make conjunction list =
       String.join (" " ++ conjunction ++ " ") list
 
     _ ->
-      (", " ++ conjunction ++ " " ++ (Maybe.withDefault "" (Last.fromList list)))
+      String.join " " [ ",", conjunction, (Maybe.withDefault "" (Last.fromList list)) ]
         |> String.append
             (List.take ((List.length list) - 1) list
               |> String.join ", "
