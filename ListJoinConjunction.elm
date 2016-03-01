@@ -44,13 +44,14 @@ make conjunction list =
 
     _ ->
       let
-        joinedList : List String
+        joinedList : String
         joinedList =
           List.take ((List.length list) - 1) list
+            |> String.join ", "
 
         appendAnd : String
         appendAnd =
           (", " ++ conjunction ++ " ")
-            |> String.append (String.join ", " joinedList)
+            |> String.append joinedList
       in
         appendAnd ++ (String.join "" (last list))
