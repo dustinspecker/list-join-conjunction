@@ -7,10 +7,11 @@
         "."
     ],
     "exposed-modules": [
-      "ListJoinConjunction"
+        "ListJoinConjunction"
     ],
     "dependencies": {
         "deadfoxygrandpa/elm-test": "3.1.1 <= v < 4.0.0",
+        "dustinspecker/last": "1.0.0 <= v < 2.0.0",
         "elm-lang/core": "3.0.0 <= v < 4.0.0",
         "laszlopandy/elm-console": "1.1.0 <= v < 2.0.0"
     },

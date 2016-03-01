@@ -6,20 +6,8 @@ module ListJoinConjunction (make) where
 @docs make
 -}
 
+import Last
 import String
-
-
-last : List String -> List String
-last list =
-  case List.length list of
-    0 ->
-      []
-
-    1 ->
-      list
-
-    _ ->
-      last (Maybe.withDefault [] (List.tail list))
 
 
 {-| Join a List of Strings into a String with a conjunction.
@@ -41,7 +29,7 @@ make conjunction list =
       String.join (" " ++ conjunction ++ " ") list
 
     _ ->
-      (", " ++ conjunction ++ " " ++ (String.join "" (last list)))
+      (", " ++ conjunction ++ " " ++ (Maybe.withDefault "" (Last.fromList list)))
         |> String.append
             (List.take ((List.length list) - 1) list
               |> String.join ", "
