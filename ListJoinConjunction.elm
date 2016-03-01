@@ -24,7 +24,7 @@ last list =
       last (Maybe.withDefault [] (List.tail list))
 
 
-{-| Join a List of Strings into a String.
+{-| Join a List of Strings into a String with a conjunction.
 
     ListJoinConjunction.make "and" [ "red", "blue" ] -- "red and blue"
     ListJoinConjunction.make "or" [ "red", "blue" ] -- "red or blue"
