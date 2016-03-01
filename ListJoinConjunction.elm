@@ -6,8 +6,6 @@ module ListJoinConjunction (make) where
 @docs make
 -}
 
-import List
-import Maybe
 import String
 
 
