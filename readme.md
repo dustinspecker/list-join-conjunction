@@ -1,4 +1,4 @@
-# ListJoinConjunction [![Build Status](https://travis-ci.org/dustinspecker/list-join-conjunction.svg?branch=master)](https://travis-ci.org/dustinspecker/list-join-conjunction)
+# ListJoinConjunction [![Build Status](https://travis-ci.org/dustinspecker/list-join-conjunction.svg?branch=master)](https://travis-ci.org/dustinspecker/list-join-conjunction) [![Elm Docs](https://img.shields.io/badge/elm-docs-brightgreen.svg)](http://package.elm-lang.org/packages/dustinspecker/list-join-conjunction/latest)
 > Join a List with a conjunction
 
 ## Install
