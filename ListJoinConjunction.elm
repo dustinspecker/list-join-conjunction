@@ -6,7 +6,7 @@ module ListJoinConjunction (make) where
 @docs make
 -}
 
-import Last
+import List.Extra
 import String
 
 
@@ -29,7 +29,7 @@ make conjunction list =
       String.join (" " ++ conjunction ++ " ") list
 
     _ ->
-      String.join " " [ ",", conjunction, (Maybe.withDefault "" (Last.fromList list)) ]
+      String.join " " [ ",", conjunction, (Maybe.withDefault "" (List.Extra.last list)) ]
         |> String.append
             (List.take ((List.length list) - 1) list
               |> String.join ", "
