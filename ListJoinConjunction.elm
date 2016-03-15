@@ -31,6 +31,6 @@ make conjunction list =
     _ ->
       String.join " " [ ",", conjunction, (Maybe.withDefault "" (List.Extra.last list)) ]
         |> String.append
-            (List.take ((List.length list) - 1) list
+            ((Maybe.withDefault [] (List.Extra.init list))
               |> String.join ", "
             )
