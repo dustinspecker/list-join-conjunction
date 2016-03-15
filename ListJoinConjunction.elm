@@ -18,17 +18,11 @@ import String
 -}
 make : String -> List String -> String
 make conjunction list =
-  case List.length list of
-    0 ->
-      ""
-
-    1 ->
-      String.join "" list
-
-    2 ->
+  case (List.length list) > 2 of
+    False ->
       String.join (" " ++ conjunction ++ " ") list
 
-    _ ->
+    True ->
       Maybe.withDefault [] (List.Extra.init list)
         |> String.join ", "
         |> (flip String.append) (String.join " " [ ",", conjunction, (Maybe.withDefault "" (List.Extra.last list)) ])
