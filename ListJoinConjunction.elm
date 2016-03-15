@@ -29,8 +29,6 @@ make conjunction list =
       String.join (" " ++ conjunction ++ " ") list
 
     _ ->
-      String.join " " [ ",", conjunction, (Maybe.withDefault "" (List.Extra.last list)) ]
-        |> String.append
-            ((Maybe.withDefault [] (List.Extra.init list))
-              |> String.join ", "
-            )
+      Maybe.withDefault [] (List.Extra.init list)
+        |> String.join ", "
+        |> (flip String.append) (String.join " " [ ",", conjunction, (Maybe.withDefault "" (List.Extra.last list)) ])
