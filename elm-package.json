@@ -4,7 +4,8 @@
     "repository": "https://github.com/dustinspecker/list-join-conjunction.git",
     "license": "MIT",
     "source-directories": [
-        "."
+        "src",
+        "tests"
     ],
     "exposed-modules": [
         "ListJoinConjunction"
